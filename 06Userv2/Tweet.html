@@ -28,8 +28,8 @@
         }
 
         function init() {
-            var TweetName = sessionStorage.getItem('username');
-            document.getElemetById('tf1').value = TweetName;
+            var TweetName = sessionStorage.getItem('userid');
+            document.getElementById('tf1').value = TweetName;
         }
 
         async function doInsert() {
