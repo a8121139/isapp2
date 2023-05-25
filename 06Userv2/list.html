@@ -32,6 +32,14 @@
             html = html + '</table>';
             document.getElementById('result').innerHTML = html;
         }
+
+        async function buttonPressed() {
+            var userid = document.getElementById('idexe').value;
+            console.log(userid);
+
+            var sql = `delete from Users where id = "${userid}"`;
+            await osql.connect(sql);
+        }
     </script>
 
 </head>
