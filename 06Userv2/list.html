@@ -24,13 +24,21 @@
             for (var i = 0; i < objects.length; i++) {
                 html = html + '<tr>';
                 var object = objects[i];
-                html = html + '<td>' + object.id + '</td>';
+                html = html + '<td id="exeuserid" + i>' + object.id + '</td>';
                 html = html + '<td>' + object.name + '</td>';
                 html = html + '<td>' + '<a href="update.html?userid=' + object.id + '">変更</a>' + '</td>';
+                html = html + '<td>' + '<button onclick=" button2Pressed(`' + object.id + '`) ">削除</button>' + '</td>'
                 html = html + '</tr>';
             }
             html = html + '</table>';
             document.getElementById('result').innerHTML = html;
+        }
+
+        async function button2Pressed(userid) {
+            console.log(userid);
+
+            var sql = `delete from Users where id = "${userid}"`;
+            await osql.connect(sql);
         }
 
         async function buttonPressed() {
