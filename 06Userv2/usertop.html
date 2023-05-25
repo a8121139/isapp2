@@ -16,15 +16,12 @@
         });
 
         function init() {
-            var name = sessionStorage.getItem('username');
+            var name = sessionStorage.getItem('userid');
             document.getElementById('welcome').innerHTML = 'ようこそ' + name + 'さん';
 
-            var url = "update.html?username=" + name;
-            console.log(url)
-            document.getElementById('update-link').href = url;
+            document.getElementById('update-link').href = "update.html?userid=" + name;
 
-            var T_url = "Tweet.html?username=" + name;
-            document.getElementById('Tweet-link').href = T_url;
+            document.getElementById('Tweet-link').href = "Tweet.html?userid=" + name;
         }
     </script>
 
