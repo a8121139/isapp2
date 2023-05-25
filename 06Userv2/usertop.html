@@ -22,9 +22,10 @@
             var url = "update.html?username=" + name;
             console.log(url)
             document.getElementById('update-link').href = url;
+
+            var T_url = "Tweet.html?username=" + name;
+            document.getElementById('Tweet-link').href = T_url;
         }
-
-
     </script>
 
 </head>
@@ -34,6 +35,9 @@
     <p id="welcome">ようこそxxさん</p>
     <hr>
     <a id="update-link" href="">ユーザー情報変更</a>
+    <br>
+    <br>
+    <a id="Tweet-link" href="">ツイート</a>
 </body>
 
 </html>
